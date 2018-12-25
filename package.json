@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run prettier-check && npm run eslint",
+    "eslint": "eslint '**/*.js'",
+    "prettier": "prettier --write '**/*.js'",
+    "prettier-check": "prettier --list-different '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -25,5 +28,16 @@
   "bugs": {
     "url": "https://github.com/chadfawcett/probot-serverless-now/issues"
   },
-  "homepage": "https://github.com/chadfawcett/probot-serverless-now#readme"
+  "homepage": "https://github.com/chadfawcett/probot-serverless-now#readme",
+  "peerDependencies": {
+    "probot": "^7.4.0"
+  },
+  "devDependencies": {
+    "@twostoryrobot/eslint-config": "^2.2.0",
+    "@twostoryrobot/prettier-config": "^2.0.1",
+    "eslint": "^5.11.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-jest": "^22.1.2",
+    "prettier": "^1.15.3"
+  }
 }
