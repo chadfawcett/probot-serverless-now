@@ -95,4 +95,4 @@ a peer dependency.
 
 ## License
 
-[MIT](LICENSE.md) Copyright 2018 Chad Fawcett
+[MIT](https://github.com/chadfawcett/probot-serverless-now/blob/master/LICENSE.md) Copyright 2018 Chad Fawcett
