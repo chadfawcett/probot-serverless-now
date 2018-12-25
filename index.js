@@ -9,8 +9,8 @@ const defaultOptions = {
   cert: findPrivateKey()
 }
 
-module.exports = (appFn, options = defaultOptions) => {
+module.exports = (app, options = defaultOptions) => {
   const probot = createProbot(options)
-  probot.setup([appFn])
+  probot.load(app)
   return probot.server
 }
