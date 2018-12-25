@@ -66,10 +66,27 @@ cert | string | [findPrivateKey()](https://github.com/probot/probot/blob/bb06c51
 
 **Example**
 
+With default options
+
 ```js
 var { serverless } = require('@chadfawcett/probot-serverless-now')
 const appFn = require('./')
 module.exports = serverless(appFn)
+```
+
+With custom options
+
+```js
+var { serverless } = require('@chadfawcett/probot-serverless-now')
+const appFn = require('./')
+
+const options = {
+  id: 123,
+  secret: process.env.MY_SECRET,
+  cert: process.env.MY_PRIVATE_KEY
+}
+
+module.exports = serverless(appFn, options)
 ```
 
 ## Install
