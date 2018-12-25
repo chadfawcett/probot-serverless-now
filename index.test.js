@@ -1,6 +1,6 @@
 const nock = require('nock')
 const request = require('supertest')
-const serverless = require('./')
+const { serverless } = require('./')
 
 nock.disableNetConnect()
 nock.enableNetConnect('127.0.0.1')
