@@ -1,0 +1,29 @@
+{
+  "name": "@chadfawcett/probot-serverless-now",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chadfawcett/probot-serverless-now.git"
+  },
+  "keywords": [
+    "probot",
+    "now",
+    "zeit",
+    "github-apps",
+    "github",
+    "automation",
+    "robots",
+    "workflow"
+  ],
+  "author": "Chad Fawcett <me@chadf.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chadfawcett/probot-serverless-now/issues"
+  },
+  "homepage": "https://github.com/chadfawcett/probot-serverless-now#readme"
+}
