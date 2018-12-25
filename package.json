@@ -1,7 +1,7 @@
 {
   "name": "@chadfawcett/probot-serverless-now",
   "version": "0.0.1",
-  "description": "Exposes your Probot App for use on Zeit Now 2.0 Lambdas",
+  "description": "A Probot extension to make it easier to run your Probot Apps on Zeit Now v2",
   "main": "index.js",
   "scripts": {
     "test": "npm run prettier-check && npm run eslint && LOG_LEVEL=fatal jest",
