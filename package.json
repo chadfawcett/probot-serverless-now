@@ -1,7 +1,7 @@
 {
   "name": "@chadfawcett/probot-serverless-now",
   "version": "0.0.1",
-  "description": "",
+  "description": "A Probot extension to make it easier to run your Probot Apps on Zeit Now v2",
   "main": "index.js",
   "scripts": {
     "test": "npm run prettier-check && npm run eslint && LOG_LEVEL=fatal jest",
@@ -17,6 +17,7 @@
     "probot",
     "now",
     "zeit",
+    "serverless",
     "github-apps",
     "github",
     "automation",
