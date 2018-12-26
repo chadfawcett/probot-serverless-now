@@ -1,7 +1,6 @@
 [![npm Version](https://badgen.net/npm/v/probot)](https://npmjs.com/package/probot)
 [![Build Status](https://semaphoreci.com/api/v1/chadfawcett/probot-serverless-now/branches/master/shields_badge.svg)](https://semaphoreci.com/chadfawcett/probot-serverless-now)
 
-
 # Zeit Now v2 Extension for Probot
 
 > A [Probot](https://github.com/probot/probot) extenstion to make it easier to
