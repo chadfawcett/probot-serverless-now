@@ -51,6 +51,22 @@ module.exports = app => {
 $ now # Deploy using now!
 ```
 
+## Using Routes
+
+Zeit Now [encourages multiple granular
+endpoints](https://github.com/zeit/docs/blob/b20b65e0aad632f9a27f82fab9148f51a70c3fd6/pages/docs/v2/deployments/concepts/lambdas.mdx#L111-L121)
+instead of one monolithic app, so whenever possible you should separate custom
+routing. That being said, there may be cases for wanting to have custom routes
+inside of your app using `app.route()`. To enable this, simply change the `src`
+path in your `now.json` to have a wildcard ending (`"src": "/*"`).
+
+```json
+{
+  ...
+  "routes": [{ "src": "/*", "dest": "/now.js" }]
+}
+```
+
 ## API
 
 ### `serverless(appFn, [options])`
