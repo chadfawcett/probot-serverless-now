@@ -1,6 +1,14 @@
 const nock = require('nock')
 const request = require('supertest')
+const { createProbot } = require('probot')
 const { serverless } = require('./')
+
+jest.mock('probot/lib/private-key', () => ({
+  findPrivateKey: () => 'privatekey'
+}))
+jest.mock('probot', () => ({
+  createProbot: jest.fn(jest.requireActual('probot').createProbot)
+}))
 
 nock.disableNetConnect()
 nock.enableNetConnect('127.0.0.1')
@@ -13,6 +21,10 @@ const createApp = name => {
       app.route(route).get('/', (_, res) => res.send(`Hello from ${route}`))
   ]
 }
+
+beforeEach(() => {
+  createProbot.mockClear()
+})
 
 test('exports regular NodeJS listener usable by servers', () => {
   const [route, app] = createApp('app1')
@@ -32,4 +44,12 @@ test('accepts an array of apps', async () => {
   await request(bot)
     .get(route2)
     .expect(200, `Hello from ${route2}`)
+})
+
+test('should only override provided defaults', () => {
+  const id = 1
+  serverless(() => {}, { id })
+  const options = createProbot.mock.calls[0][0]
+  expect(options.id).toBe(id)
+  expect(options.cert).toBe('privatekey')
 })
