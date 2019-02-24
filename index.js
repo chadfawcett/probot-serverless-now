@@ -9,8 +9,9 @@ const defaultOptions = {
   cert: findPrivateKey()
 }
 
-module.exports.serverless = (app, options = defaultOptions) => {
+module.exports.serverless = (apps, options = defaultOptions) => {
   const probot = createProbot(options)
-  probot.load(app)
+  apps = [].concat(apps) //  Coerce to array
+  apps.forEach(a => probot.load(a))
   return probot.server
 }
