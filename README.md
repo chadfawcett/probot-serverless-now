@@ -84,11 +84,20 @@ module.exports = serverless([statsApp, myApp])
 
 ## API
 
-### `serverless(appFn, [options])`
+### `serverless(appFn[, options])`
 
-Create a new instance of Probot and load the supplied App.
+Create a new instance of Probot and load the supplied App\[s\].
 
-**Options**
+#### Parameters
+
+<!-- prettier-ignore-start -->
+Name | Type | Required | Description
+--- | --- | --- | ---
+appFn | function \| array | true | Single or array of of Probot App functions
+options | [object](#options) | false | Probot config options
+<!-- prettier-ignore-end -->
+
+#### Options
 
 <!-- prettier-ignore-start -->
 Name | Type | Default | Description
