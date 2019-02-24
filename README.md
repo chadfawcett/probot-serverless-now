@@ -67,6 +67,21 @@ path in your `now.json` to have a wildcard ending (`"src": "/*"`).
 }
 ```
 
+## Multiple Apps
+
+As mentioned in [using routes](#using-routes), monolithic apps are discouraged.
+That being said, there may be a use case for running multiple Probot Apps
+together (ie logging, stats, etc). For this reason the `serverless` function
+also accepts an array of app functions.
+
+```js
+var { serverless } = require('@chadfawcett/probot-serverless-now')
+const statsApp = require('probot/lib/apps/stats')
+const myApp = require('./')
+
+module.exports = serverless([statsApp, myApp])
+```
+
 ## API
 
 ### `serverless(appFn, [options])`
