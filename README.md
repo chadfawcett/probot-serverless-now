@@ -39,8 +39,8 @@ module.exports = app => {
   "version": 2,
   "env": {
     "APP_ID": "@app-id",
-    "WEBHOOK_SECRET": "@webhook-secret-base64-encoded",
-    "PRIVATE_KEY": "@private-key"
+    "WEBHOOK_SECRET": "@webhook-secret",
+    "PRIVATE_KEY": "@private-key-base64-encoded"
   },
   "builds": [{ "src": "now.js", "use": "@now/node" }],
   "routes": [{ "src": "/", "dest": "/now.js" }]
