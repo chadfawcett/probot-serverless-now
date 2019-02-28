@@ -1,6 +1,6 @@
 {
   "name": "@chadfawcett/probot-serverless-now",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "A Probot extension to make it easier to run your Probot Apps on Zeit Now v2",
   "main": "index.js",
   "scripts": {
