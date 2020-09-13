@@ -1,5 +1,5 @@
 const { createProbot } = require('probot')
-const { findPrivateKey } = require('probot/lib/private-key')
+const { findPrivateKey } = require('probot/lib/helpers/get-private-key')
 
 require('dotenv').config()
 
