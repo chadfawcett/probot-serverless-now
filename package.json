@@ -1,6 +1,6 @@
 {
   "name": "@chadfawcett/probot-serverless-now",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A Probot extension to make it easier to run your Probot Apps on Zeit Now v2",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/chadfawcett/probot-serverless-now#readme",
   "peerDependencies": {
-    "probot": "^7.2"
+    "probot": "^10.2"
   },
   "devDependencies": {
     "@twostoryrobot/eslint-config": "^2.2.0",
@@ -42,7 +42,7 @@
     "jest": "^23.6.0",
     "nock": "^10.0.5",
     "prettier": "^1.15.3",
-    "probot": "^7.2.0",
+    "probot": "^10.2.0",
     "supertest": "^3.3.0"
   }
 }
