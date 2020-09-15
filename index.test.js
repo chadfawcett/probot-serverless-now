@@ -3,7 +3,7 @@ const request = require('supertest')
 const { createProbot } = require('probot')
 const { serverless } = require('./')
 
-jest.mock('probot/lib/private-key', () => ({
+jest.mock('probot/lib/helpers/get-private-key', () => ({
   findPrivateKey: () => 'privatekey'
 }))
 jest.mock('probot', () => ({
